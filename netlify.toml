@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"  # or "yarn build" if you're using Yarn
+  publish = "build"  # or whatever your build output directory is
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -199,53 +199,55 @@ const EnglishTeacherWebsite = () => {
         </section>
 
         <section id="contact" className="section">
-          <h2>{t.contactMe}</h2>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            onSubmit={handleSubmit}
-            className="contact-form"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div>
-              <label htmlFor="name">{t.name}</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formState.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email">{t.email}</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formState.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message">{t.message}</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                value={formState.message}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="cta-button">
-              {t.send}
-            </button>
-          </form>
-        </section>
+        <h2>{t.contactUs}</h2>
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+          <div>
+            <label htmlFor="name">{t.name}</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              value={formState.name}
+              onChange={handleInputChange}
+              required 
+            />
+          </div>
+          <div>
+            <label htmlFor="email">{t.email}</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              value={formState.email}
+              onChange={handleInputChange}
+              required 
+            />
+          </div>
+          <div>
+            <label htmlFor="message">{t.message}</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              value={formState.message}
+              onChange={handleInputChange}
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="cta-button">{t.send}</button>
+        </form>
+      </section>
       </main>
 
       <footer className="footer">
