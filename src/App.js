@@ -162,7 +162,12 @@ const EnglishTeacherWebsite = () => {
       <main className="main container">
         <section id="about" className="section">
           <div className="about-content">
-            <img src={portrait} alt="Melody" className="profile-image" />
+            <img
+              src={portrait}
+              alt="Melody"
+              className="profile-image"
+              loading="lazy"
+            />
             <div>
               <h2>{t.welcome}</h2>
               <p>{t.introduction}</p>
