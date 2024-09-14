@@ -1,0 +1,297 @@
+/* MelodyEnglishSchool.css */
+
+:root {
+  --primary-color: #1DC9BA; /* Teal from the book */
+  --secondary-color: #0E3D59; /* Dark blue from the outline */
+  --accent-color: #FF6B6B; /* Coral from the music note */
+  --text-color: #333333;
+  --background-color: #F5EFE0; /* Light beige background */
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--white);
+  text-shadow: 1px 1px 2px var(--secondary-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-list li {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: var(--accent-color);
+}
+
+.language-currency {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.language-select, .currency-select {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.section {
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.course-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-color);
+}
+
+.course-card h3 {
+  color: var(--secondary-color);
+}
+
+.course-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-card li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.savings {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.logo-container {
+  max-width: 130px; /* Adjust this value based on your logo size */
+  height: auto;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-image {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    margin-bottom: 1rem;
+  }
+
+  .language-currency {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .language-select, .currency-select {
+    width: 48%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
