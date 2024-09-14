@@ -48,6 +48,14 @@ const EnglishTeacherWebsite = () => {
       .catch((error) => alert(error));
   };
 
+  const handleLanguageChange = (e) => {
+    setLanguage(e.target.value);
+  };
+
+  const handleCurrencyChange = (e) => {
+    setCurrency(e.target.value);
+  };
+
   const t = translations[language];
 
   const basePrice = {
